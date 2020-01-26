@@ -6,12 +6,9 @@ terraform {
   required_version = ">= 0.11"
 }
 
-resource "ibm_resource_group" "resourceGroup" {
-  name     = "default"
-}
-
 resource "ibm_function_action" "hellojs" {
   name = "pyhello"
+  namespace = "wdc-namespace"
 
   exec {
     kind = "nodejs"
