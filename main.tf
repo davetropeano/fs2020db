@@ -7,7 +7,7 @@ terraform {
 }
 
 resource "ibm_function_action" "hellojs" {
-  name = "/wdc-namespace_dev/pyhello"
+  name = "myorg_dev/pyhello"
 
   exec {
     kind = "nodejs"
