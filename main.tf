@@ -3,7 +3,7 @@ provider "ibm" {
 }
 
 terraform {
-  required_version = ">= 0.12"
+  required_version = ">= 0.11"
 }
 
 resource "ibm_resource_group" "resourceGroup" {
@@ -15,10 +15,10 @@ resource "ibm_function_action" "hellojs" {
 
   exec {
     kind = "nodejs"
-    code = file("hello.js")
+    code = "${file("hello.js")}"
   }
 }
 
 output "function_action" {
-    value = ibm_function_action.hellojs
+    value = "${ibm_function_action.hellojs}"
 }
