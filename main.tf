@@ -20,5 +20,5 @@ resource "ibm_function_action" "hellojs" {
 }
 
 output "function_action" {
-    value = "${ibm_function_action.hellojs}"
+    value = "${ibm_function_action.hellojs.exec}"
 }
