@@ -7,6 +7,14 @@ terraform {
   required_version = ">= 0.11"
 }
 
+resource "ibm_org" "fs2020_org" {
+  name = "fs2020"
+}
+resource "ibm_space" "dev_space" {
+  org = "fs2020"
+  space = "dev"
+}
+
 resource "ibm_function_action" "hellojs" {
   name = "pyhello"
 
