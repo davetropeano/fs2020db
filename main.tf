@@ -12,7 +12,7 @@ resource "ibm_org" "fs2020_org" {
 }
 resource "ibm_space" "dev_space" {
   org = "fs2020"
-  space = "dev"
+  name = "dev"
 }
 
 resource "ibm_function_action" "hellojs" {
