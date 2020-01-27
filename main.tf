@@ -1,6 +1,6 @@
 provider "ibm" {    
     ibmcloud_api_key = "${var.ibmcloud_api_key}"
-    region = "us-east"
+    region = "eu-de"
     function_namespace="fs2020_dev"
 }
 
