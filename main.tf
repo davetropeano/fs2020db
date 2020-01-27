@@ -1,6 +1,12 @@
 provider "ibm" {    
+    ibmcloud_api_key = "${var.ibmcloud_api_key}"
     region = "us-east"
     function_namespace="fs2020_dev"
+}
+
+variable "ibmcloud_api_key" {
+  description = "your IBM Cloud API Key"
+  default = ""
 }
 
 terraform {
@@ -16,7 +22,7 @@ resource "ibm_space" "dev_space" {
 }
 
 resource "ibm_function_action" "hellojs" {
-  name = "pyhello"
+  name = "hellojs"
 
   exec {
     kind = "nodejs"
