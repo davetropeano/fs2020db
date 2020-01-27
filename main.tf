@@ -1,5 +1,6 @@
 provider "ibm" {    
     region = "us-east"
+    function_namespace="fs2020_dev"
 }
 
 terraform {
@@ -7,7 +8,7 @@ terraform {
 }
 
 resource "ibm_function_action" "hellojs" {
-  name = "functionsdemo_dev/pyhello"
+  name = "pyhello"
 
   exec {
     kind = "nodejs"
